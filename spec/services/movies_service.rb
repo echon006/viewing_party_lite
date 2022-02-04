@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe MovieService do
   context 'class methods' do
     it "returns member data" do
+      
       VCR.use_cassette('search_data_from_api') do
         search = MovieService.searched_movies('Fight')
         expect(search).to be_a Hash
