@@ -1,7 +1,7 @@
 
 
 <%  if @movie_info %>
-  <h3> Movies with the keyword "<%= @keyword %>""</h3>
+  <h3> Movies with the keyword "<%= @keyword %>"</h3>
   <%= button_to "Discover Page", "/users/#{@user.id}/discover", method: :get %>
 
   <% @movie_info.each do |movie| %>
@@ -9,6 +9,7 @@
     <p><%= link_to movie.title, "/users/#{@user.id}/movies/#{movie.id}" %>  Rating: <%= movie.vote_average %></p>
   <% end %>
 <% elsif @top_rated_movies %>
+<h3> Top Rated Movies </h3>
   <% @top_rated_movies.each do |top_movie| %>
   <%= button_to "Discover Page", "/users/#{@user.id}/discover", method: :get %>
 
