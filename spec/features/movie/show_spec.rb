@@ -50,4 +50,16 @@ RSpec.describe 'Movie show page' do
     end
   end
 
+  it "has a button to create a viewing party" do
+    VCR.use_cassette('movie_data_from_api') do
+      user_1 = User.create!(name: 'User 1', email: 'email1@gmail.com')
+      visit "/users/#{user_1.id}/movies/550"
+
+      expect(page).to have_button("Create Viewing Party")
+
+      click_button "Create Viewing Party"
+
+      expect(current_path).to eq("/users/#{user_1.id}/movies/550/user_parties/new")
+    end
+  end
 end
