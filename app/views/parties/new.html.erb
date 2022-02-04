@@ -1,0 +1,20 @@
+<%= form_with url: "/users/#{@user.id}/movies/#{@movie[:id]}/parties", method: :post, local: true do |f| %>
+  <%= f.label :duration %>
+  <%= f.text_field :duration %>
+  <br>
+  <%= f.label :date %>
+  <%= f.text_field :date %>
+  <br>
+  <%= f.label :start_time %>
+  <%= f.text_field :start_time %>
+  <br>
+
+  <%= f.hidden_field :party_movie_id, value: @movie[:id] %>
+  <%= f.hidden_field :host, value: true %>
+  <br>
+  <%= f.submit "Create Party"%>
+
+  <% @users.each do |user| %>
+    <%= user.email %>
+  <% end %>
+<% end %>

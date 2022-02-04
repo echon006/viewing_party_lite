@@ -2,13 +2,21 @@
 <p> <%= button_to "Discover Movies", user_discover_index_path(@user), method: :get %></p>
 
 <h2>Viewing parties:</h2>
-<p><% @user.user_parties.each do |up| %> </p>
+
+<p><% @user.parties.each do |p| %> </p>
+
 <% # need to add movie title here once API is created %>
-  <%= up.party.date %>
-  <%= up.party.start_time %>
-  <% if up.host == true %>
-    <p>Hosting</p>
-  <% else %>
-    <p>Invited</p>
-  <% end %>
+
+<%#  @movie[:poster_path] %>
+<h4><%= @movie[:title] %></h4>
+<p> Date: <%= p.date %> </p>
+<p> Start time: <%= p.start_time %></p>
+
+<% if p.user_parties.first.host == true %>
+  <p>Hosting</p>
+<% elsif p.user_parties.first.host == false %>
+  <p>Invited</p>
+<% else %>
+  <p> Somethings wrong</p>
+<% end %>
 <% end %>

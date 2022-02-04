@@ -6,7 +6,8 @@ Rails.application.routes.draw do
 
 
   # get '/users', to: 'users#show'
-  resources :users, only: [:show, :create] do
+  resources :users, only: [:show, :create ] do
+    resources :user_parties, only: [:create]
     resources :discover, only: [:index]
     resources :movies, only: [:index, :show] do
       resources :parties, only: [:show, :new, :create]

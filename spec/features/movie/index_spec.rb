@@ -13,7 +13,7 @@ RSpec.describe 'Movie index page' do
       expect(current_path).to eq("/users/#{user_1.id}/movies")
       expect(page).to have_content("Fight Club")
       expect(page).to have_content("Rating: 8.4")
-      save_and_open_page
+
       expect(page).to have_content('Movies with the keyword "Fight"')
 
 
