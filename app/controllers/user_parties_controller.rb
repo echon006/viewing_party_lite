@@ -1,0 +1,3 @@
+class UserPartiesController < ApplicationController
+
+end

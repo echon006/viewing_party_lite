@@ -10,8 +10,8 @@
   <% end %>
 <% elsif @top_rated_movies %>
 <h3> Top Rated Movies </h3>
+<%= button_to "Discover Page", "/users/#{@user.id}/discover", method: :get %>
   <% @top_rated_movies.each do |top_movie| %>
-  <%= button_to "Discover Page", "/users/#{@user.id}/discover", method: :get %>
 
     <p><%= link_to top_movie.title, "/users/#{@user.id}/movies/#{top_movie.id}"  %> Rating: <%= top_movie.vote_average %></p>
   <% end %>
