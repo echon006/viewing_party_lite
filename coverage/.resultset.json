@@ -7,7 +7,30 @@
           null
         ]
       },
-      "/Users/croixkimmel/turing/3mod/projects/viewing_party_lite/app/services/movie_service.rb": {
+
+      "/Users/ericchon/turing/3mod/projects/viewing_party_lite/app/facades/movie_facade.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          4,
+          4,
+          80,
+          null,
+          null,
+          null,
+          1,
+          2,
+          null,
+          2,
+          80,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/3mod/projects/viewing_party_lite/app/models/party.rb": {
+
         "lines": [
           1,
           null,
@@ -46,9 +69,40 @@
       },
       "/Users/croixkimmel/turing/3mod/projects/viewing_party_lite/app/models/party.rb": {
         "lines": [
-          0,
-          0,
-          0,
+          1,
+          1,
+          null,
+          1,
+          161,
+          161,
+          161,
+          null,
+          null
+        ]
+      },
+      "/Users/ericchon/turing/3mod/projects/viewing_party_lite/app/services/movie_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          4,
+          4,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null,
+          1,
+          8,
+          8,
+          null,
           null,
           0
         ],
@@ -193,60 +247,11 @@
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          null
+        ]
       },
-      "/Users/croixkimmel/turing/3mod/projects/viewing_party_lite/app/controllers/users_controller.rb": {
+      "/Users/ericchon/turing/3mod/projects/viewing_party_lite/app/mailers/application_mailer.rb": {
         "lines": [
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
           0,
           null,
           0,
@@ -306,6 +311,7 @@
         }
       }
     },
-    "timestamp": 1643991704
+
+    "timestamp": 1643992745
   }
 }
