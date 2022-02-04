@@ -2,6 +2,8 @@
 
 <%= button_to "Discover Page", "/users/#{@user.id}/discover", method: :get %>
 
+<%= button_to "Create Viewing Party", "/users/#{@user.id}/movies/#{@movie[:id]}/user_parties/new", method: :get %>
+
 <p>Vote Average: <%= @movie[:vote_average]%>    Runtime: <%= @movie[:runtime]%>      Genre(s): <%= @movie[:genres].first[:name] %></p>
 <h4>Summary: </h4>
 <p><%= @movie[:overview] %></p>
