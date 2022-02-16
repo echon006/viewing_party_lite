@@ -1,6 +1,6 @@
 
 <%= button_to "Create new user", register_path, method: :get %>
-
+<%= link_to "Log In", login_path %>
 <% @users.each do |user| %>
   <p><%= link_to "#{user.email}'s Dashboard", user_path(user)%></p>
 <% end %>
