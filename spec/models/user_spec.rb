@@ -15,16 +15,5 @@ RSpec.describe User, type: :model do
     it { should have_many(:parties).through(:user_parties)}
   end
 
-  it 'has a form for new users' do
-    visit register_path
-
-    fill_in("Name", with: "Name_1")
-    fill_in("Email", with: "Name_1@email.com")
-    fill_in("Password", with: "hello123")
-    fill_in("Password confirmation", with: "hello123")
-
-    click_button "Register"
-    expected = User.last
-    expect(current_path).to eq("/users/#{expected.id}")
-  end
+  
 end
