@@ -12,7 +12,7 @@ RSpec.describe 'User new page' do
 
     click_button "Register"
     expected = User.last
-    expect(current_path).to eq("/users/#{expected.id}")
+    expect(current_path).to eq("/dashboard")
     # expect(flash[:success]).to be_present
   end
 

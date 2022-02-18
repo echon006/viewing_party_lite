@@ -12,7 +12,7 @@ RSpec.describe 'User login page' do
 
     click_button "Register"
     expected = User.last
-    expect(current_path).to eq("/users/#{expected.id}")
+    expect(current_path).to eq("/dashboard")
     visit login_path
 
 
@@ -21,7 +21,7 @@ RSpec.describe 'User login page' do
 
     click_button "Log in"
 
-    expect(current_path).to eq("/users/#{expected.id}")
+    expect(current_path).to eq("/dashboard")
   end
 
   it 'checks login fails if password is incorrect' do
@@ -34,7 +34,7 @@ RSpec.describe 'User login page' do
 
     click_button "Register"
     expected = User.last
-    expect(current_path).to eq("/users/#{expected.id}")
+    expect(current_path).to eq("/dashboard")
     visit login_path
 
     fill_in("Email", with: "Name_1@email.com")
