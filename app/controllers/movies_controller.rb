@@ -18,6 +18,7 @@ class MoviesController < ApplicationController
         faraday.params[:api_key] = ENV['movies_api_key']
     end
 
+
     movie_id_response = conn.get("/3/movie/#{@movie_id}")
     @movie = JSON.parse(movie_id_response.body, symbolize_names: true)
     cast_response = conn.get("/3/movie/#{@movie_id}/credits")
