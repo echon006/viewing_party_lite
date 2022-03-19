@@ -13,7 +13,7 @@ RSpec.describe 'Landing index page' do
     expect(current_path).to eq(register_path)
   end
 
-  it "has list of existing users" do
+  xit "has list of existing users" do
     user_1 = User.create!(name: 'User 1', email: 'email1@gmail.com')
     user_2 = User.create!(name: 'User 2', email: 'email2@gmail.com')
     user_3 = User.create!(name: 'User 3', email: 'email3@gmail.com')
@@ -23,7 +23,7 @@ RSpec.describe 'Landing index page' do
     expect(page).to have_content("#{user_3.email}'s Dashboard")
   end
 
-  it "has list of existing users as links" do
+  xit "has list of existing users as links" do
     user_1 = User.create!(name: 'User 1', email: 'email1@gmail.com')
     user_2 = User.create!(name: 'User 2', email: 'email2@gmail.com')
     user_3 = User.create!(name: 'User 3', email: 'email3@gmail.com')
@@ -37,6 +37,12 @@ RSpec.describe 'Landing index page' do
     visit '/'
     click_link 'Home'
     expect(current_path).to eq('/')
+  end
+
+  it "has link to log in page" do
+    visit '/'
+    click_link 'Log In'
+    expect(current_path).to eq('/login')
   end
 
 end

@@ -11,7 +11,6 @@ class MovieService
 
     top_rated_response_page_2 = conn.get("/3/movie/top_rated?&page=2")
     top_rated_movies_page_2 = JSON.parse(top_rated_response_page_2.body, symbolize_names: true)
-
     @top_40_movies = top_rated_movies_page_1[:results].push(top_rated_movies_page_2[:results]).flatten
   end
 
@@ -19,5 +18,6 @@ class MovieService
     conn = Faraday.new(url: "https://api.themoviedb.org") do |faraday|
       faraday.params[:api_key] = ENV['movies_api_key']
     end
+
   end
 end

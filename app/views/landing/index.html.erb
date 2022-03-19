@@ -1,6 +1,12 @@
+<% if current_user %>
+  <%= link_to "Logout", '/logout', method: :delete %>
+<% else %>
+  <%= button_to "Create new user", register_path, method: :get %>
+  <%= link_to "Log In", login_path %>
+<% end  %>
 
-<%= button_to "Create new user", register_path, method: :get %>
-
-<% @users.each do |user| %>
-  <p><%= link_to "#{user.email}'s Dashboard", user_path(user)%></p>
-<% end %>
+<% if current_user %>
+  <% @users.each do |user| %>
+    <p><%="#{user.email}"%></p>
+    <% end %>
+<% end  %>

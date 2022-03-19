@@ -1,8 +1,5 @@
 class PartiesController < ApplicationController
-  # GET /parties or /parties.json
-
-
-  # GET /parties/1 or /parties/1.json
+before_action :require_user
   def show
   end
 
@@ -34,7 +31,7 @@ class PartiesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-  
+
 
     # Only allow a list of trusted parameters through.
     def party_params
